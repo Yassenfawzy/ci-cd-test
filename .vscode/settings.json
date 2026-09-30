@@ -1,0 +1,16 @@
+{
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml",
+        "file:///home/yassen/my-express-app/.github/workflows/ci.yml"
+    ],
+    "yaml.schemas": {
+        "https://www.schemastore.org/github-action.json": "file:///home/yassen/my-express-app/.github/workflows/ci.yml",
+        "https://www.schemastore.org/github-workflow.json": "file:///home/yassen/my-express-app/.github/workflows/ci.yml",
+        "https://gitlab.com/gitlab-org/gitlab-foss/-/raw/master/app/assets/javascripts/editor/schema/ci.json": "file:///home/yassen/my-express-app/.github/workflows/ci.yml"
+    }
+}

@@ -1,0 +1,26 @@
+on:
+    pull_request:
+
+jobs: 
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository code (v4 is the latest stable)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js environment (v4 is the latest stable with Node LTS)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Install dependencies & Build
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Run Tests
+      - name: Run unit tests
+        run: npm test
